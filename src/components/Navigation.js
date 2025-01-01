@@ -20,22 +20,32 @@ const Navigation = () => {
     };
   }, [scrolled]);
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className={`navigation ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        <Link to="/" className="nav-logo">
-          <span className="logo-text">DevPro</span>
+        <Link to="/" className="nav-logo" onClick={closeMenu}>
+          <span className="logo-text">Self_DEV</span>
         </Link>
-        <div className={`nav-toggle ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
-          <span></span>
-          <span></span>
-          <span></span>
+        <div className={`nav-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+          <div className="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
         <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-          <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
-          <li><Link to="/sobre" onClick={() => setIsOpen(false)}>Sobre</Link></li>
-          <li><Link to="/projetos" onClick={() => setIsOpen(false)}>Projetos</Link></li>
-          <li><Link to="/contato" onClick={() => setIsOpen(false)}>Contato</Link></li>
+          <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+          <li><Link to="/sobre" onClick={closeMenu}>Sobre</Link></li>
+          <li><Link to="/projetos" onClick={closeMenu}>Projetos</Link></li>
+          <li><Link to="/contato" onClick={closeMenu}>Contato</Link></li>
         </ul>
       </div>
     </nav>

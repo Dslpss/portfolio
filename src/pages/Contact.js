@@ -9,9 +9,9 @@ const Contact = () => {
         <div className="contact-content">
           <div className="contact-info">
             <h2>Informações de Contato</h2>
-            <p><i className="fas fa-envelope"></i> seu-email@exemplo.com</p>
-            <p><i className="fas fa-phone"></i> (00) 12345-6789</p>
-            <p><i className="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+            <p><i className="fas fa-envelope"></i> dennisemannuel93@gmail.com</p>
+            <p><i className="fas fa-phone"></i> (34) 99722-0530</p>
+            <p><i className="fas fa-map-marker-alt"></i> Uberlândia, MG</p>
             <div className="social-links">
               <a 
                 href="https://linkedin.com/in/seu-perfil" 

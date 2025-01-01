@@ -56,7 +56,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <Nav>
-        <Logo to="/">SeuNome</Logo>
+        <Logo to="/">Dennis Emannuel</Logo>
         <NavLinks>
           <StyledNavLink to="/" end>Início</StyledNavLink>
           <StyledNavLink to="/projects">Projetos</StyledNavLink>
